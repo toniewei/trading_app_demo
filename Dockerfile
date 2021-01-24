@@ -12,3 +12,4 @@ RUN mvn -f /build/pom.xml clean package -DskipTests
 FROM openjdk:8-alpine
 COPY --from=build /build/target/trading-1.0-SNAPSHOT.jar /usr/local/app/trading/lib/trading_app.jar
 ENTRYPOINT ["java","-jar","/usr/local/app/trading/lib/trading_app.jar"]
+#
